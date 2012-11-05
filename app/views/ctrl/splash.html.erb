@@ -82,11 +82,6 @@ html{
 </style>
 <script>
 $(function(){
-	$('#gotocinema').click(
-		function(){
-			window.location = "<%= url_for(:action => 'cinema') %>";
-		}
-	);
 	$('#showgcal').click(
 		function(){
 			$('#gcal').fadeToggle();
@@ -99,8 +94,7 @@ $(function(){
 	<h1>Welcome, Cyber Stalkers</h1>
 	<h2>Thanks for dropping by!</h2>
 	<br>
-	<p>My notepad is <a href="http://notes.samwong.hk">here</a>. My books are <a href="/books">here</a>. Library Caffeine is <a href="/LibraryCaffeine.jar" class="showtip" original-title="Stops machines from sleeping / logging out">here</a>.<br>
-		If you have heard about the <span id='gotocinema'>cinema</span>, it doesn't exist.</p>
+	<p>My notepad is <a href="http://notes.samwong.hk">here</a>. My books are <a href="http://books.samwong.hk">here</a>. Library Caffeine is <a href="/LibraryCaffeine.jar" class="showtip" original-title="Stops machines from sleeping / logging out">here</a>.<br>
 	<p>Those icons at the bottom should satisfy your stalking / scheduling needs:</p>	
 
 	<%=image_tag("signature-alpha-white.png",  :width => '200px', :style => 'margin: 0')%><br>
@@ -111,8 +105,8 @@ $(function(){
 		+852 6604 7181
 	</div>
 	<div id='movers-row'>
-		<div><a href="http://www.facebook.com/talktosamwong" class='showtip' original-title='or use facebook.samwong.hk'><%=image_tag("facebook.png", :width => '50px')%></a></div>
-		<div><a href="http://www.linkedin.com/in/samwong1990" class='showtip' original-title='or use linkedin.samwong.hk'><%=image_tag("linkedin.png", :width => '50px')%></a></div>
+		<div><a href="http://facebook.samwong.hk" class='showtip' original-title='next time, simply facebook.samwong.hk'><%=image_tag("facebook.png", :width => '50px')%></a></div>
+		<div><a href="http://linkedin.samwong.hk" class='showtip' original-title='next time, simply linkedin.samwong.hk'><%=image_tag("linkedin.png", :width => '50px')%></a></div>
 		<div><a href="skype:samwong1990?add"><%=image_tag("skype.png", :width => '50px', :alt => 'Add me to Skype')%></a></div>
 		<div><a href="#" ><%=image_tag("gcalendar.png",  :id  =>  'showgcal', :width => '50px')%></a></div><br>
 	</div>

@@ -1,0 +1,35 @@
+<style type="text/css">
+body{	
+	height: 100%;
+	background-image: url('/assets/splash.jpg');
+/*	background-size:cover;*/
+	background-repeat: no-repeat;
+	background-position: right 90%;
+}
+
+#block{
+	margin: 10%;
+	background-color: rgba(0,0,0,0.6);
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	border-radius: 15px;
+	padding: 15px;
+}
+
+#block h1,h2,h5,p,ul,li{
+	 color: white;
+}
+
+}
+
+
+</style>
+<div id='block'>
+	<h1 style='text-align:center; font-size:5em; line-height: 2em; color:paleGoldenrod'>Just take them, please.</h1>
+	<h1>Physical books</h1>
+	<%= @physicalBooklist.html_safe %>
+	<h1>ebooks</h1>
+	<%= @ebooklist.html_safe%> 
+	<h5>Credits: Me, <a style="color:white;" href='http://rafal.io'>Rafal</a>, Maciek, Jamal, Suhaib</h5>
+</div>

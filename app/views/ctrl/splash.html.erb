@@ -1,0 +1,123 @@
+
+<% @contentHeight = '430' %>
+<% @contentWidth = '480' %>
+<style type="text/css">
+body{	
+	height: 100%;
+	background-image: url('/assets/splash.jpg');
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+html{
+	height: 100%;	
+}
+
+#block img{
+	margin: 15px;
+}
+
+#block{
+	position: absolute;
+	top:50%;
+	bottom:50%;
+	height:<%=@contentHeight%>px;
+	background-color: rgba(0,0,0,0.6);
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	border-radius: 15px;
+	width: <%= @contentWidth %>px;
+	padding: 15px;
+
+	left:10%;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#block h1,h2,p{
+	 color: white;
+}
+
+#block a{
+	color: paleGoldenrod;
+}
+
+#gcal{
+	position: absolute;
+	top:50%;
+	bottom:50%;
+	height:<%=@contentHeight%>px;
+	background-color: rgba(0,0,0,0.6);
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	border-radius: 15px;
+	width: <%= @contentWidth %>px;
+	padding: 15px;
+	
+	right:10%;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+/*	http://css-tricks.com/equidistant-objects-with-css/	*/
+#movers-row {
+
+}
+#movers-row div {
+        width: 23%;
+        float: left;
+}
+#movers-row div a, #movers-row div img {
+        float: right;
+}
+
+#illutrationCredits {
+	float: right;
+	color: white;
+	margin-top: 15px;
+}
+</style>
+<script>
+$(function(){
+	$('#gotocinema').click(
+		function(){
+			window.location = "<%= url_for(:action => 'cinema') %>";
+		}
+	);
+	$('#showgcal').click(
+		function(){
+			$('#gcal').fadeToggle();
+		}
+	);
+	$('.showtip').tipsy({fade: true, gravity: 'n', delayIn: 0, delayOut: 0});
+});
+</script>
+<div id='block'>
+	<h1>Welcome, Cyber Stalkers</h1>
+	<h2>Thanks for dropping by!</h2>
+	<br>
+	<p>My notepad is <a href="http://notes.samwong.hk">here</a>. My books are <a href="/books">here</a>. Library Caffeine is <a href="/LibraryCaffeine.jar" class="showtip" original-title="Stops machines from sleeping / logging out">here</a>.<br>
+		If you have heard about the <span id='gotocinema'>cinema</span>, it doesn't exist.</p>
+	<p>Those icons at the bottom should satisfy your stalking / scheduling needs:</p>	
+
+	<%=image_tag("signature-alpha-white.png",  :width => '200px', :style => 'margin: 0')%><br>
+	<div style='color:white; margin-left:15px'>
+		<strong>Sam Wong</strong><br>
+		<a href='mailto:s@mwong.hk'>s@mwong.hk</a><br>
+		+44 7717 304 189 |
+		+852 6604 7181
+	</div>
+	<div id='movers-row'>
+		<div><a href="http://www.facebook.com/talktosamwong" class='showtip' original-title='or use facebook.samwong.hk'><%=image_tag("facebook.png", :width => '50px')%></a></div>
+		<div><a href="http://www.linkedin.com/in/samwong1990" class='showtip' original-title='or use linkedin.samwong.hk'><%=image_tag("linkedin.png", :width => '50px')%></a></div>
+		<div><a href="skype:samwong1990?add"><%=image_tag("skype.png", :width => '50px', :alt => 'Add me to Skype')%></a></div>
+		<div><a href="#" ><%=image_tag("gcalendar.png",  :id  =>  'showgcal', :width => '50px')%></a></div><br>
+	</div>
+	<span id='illutrationCredits'>Illustration by Suhaib Sarmad</span>
+</div>
+<div id='gcal'  style='display:none;' >
+<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=sam.wong.1990%40gmail.com&amp;color=%23060D5E&amp;src=inlhapfv74hvnfo1d5ot4obs1pajnv5d%40import.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FLondon" style=" border-width:0 " width="<%= @contentWidth %>" height="<%=@contentHeight%>" frameborder="0" scrolling="no"></iframe>
+</div>

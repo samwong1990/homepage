@@ -6,40 +6,6 @@ class CtrlController < ApplicationController
     end
 
     def cinema
-        @list720p = '<ul>'
-        "01.30.08.The.Elephant.Man.1980.x264.HD.DVDRiP-CHD
-        A Prophet [Un Prophete] 2009 720p BRRip x264 AAC-BeLLBoY (Kingdom-Release)
-        Baaria.2009.iTALiAN.720p.BluRay.x264-Republic
-        Desperado.1995.BluRay.720p.DTS.x264.CHD
-        <del>Fast.Five.2011.720p.BluRay.x264-HDTeam</del>
-        Fight.Club.1999.Bluray.720p.DTS.x264-CHD
-        La tempesta perfetta - The Perfect Storm [BDRip-720p-MultiLang-MultiSub-Chapters][RiP By MaX].mkv
-        <del>Matchstick.Men.2003.720p.HDTV.x264-ESiR</del>
-        Munich.2005.BRrip.720p.Dual.Audio.Eng-Hindi~MSBHATTI
-        Once Upon A Time In Mexico 2003 720p BRRip x264-HDLiTE
-        Patton.1970.BRRip.H264.AAC.5.1ch.Gopo
-        Raging.Bull.1980.720p.HDTV.x264-SS
-        Sucker.Punch.Extended.Cut.2011
-        <del>The Deer Hunter 1978 720p BRRip x264-HDLiTE</del>
-        The.Godfather.Boxset.SLOSub.720p.BluRay.x264-SCC
-        The.Hurt.Locker.720p.Dual.Audio.Hindi-Eng.BluRay.DjVikas
-        The.Pianist.2002.720p.HDDVD.x264-ESiR.mkv"
-        .each_line.each{|x| @list720p += '<li>' + x + '</li>'}
-        @list720p += '</ul>'
-        @list720p = @list720p.html_safe
-        
-        @sd = '<ul>'
-        "A.Fistful.Of.Dollars.1964
-        <del>Seven.Samurai - Akira.Kurosawa</del>
-        Empire.Of.The.Sun.1987.SWESUB.DVDRip.XviD-Pride86
-        For.A.Few.Dollars.More.1965.PAL.DVDR-minOdroL
-        Saturday Night Fever
-        Unforgiven.1992.MULTISUBS.PAL.DVDR-HEMMABiO
-        lawrence of Arabia.avi"
-        .each_line.each{|x| @sd += '<li>' + x + '</li>'}
-        @sd += '</ul>'
-        @sd = @sd.html_safe
-        
         @games = '<ul>'
         "The Glorious SNES, with the WHOLE collection!
         Atari goodies

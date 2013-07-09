@@ -29,25 +29,7 @@ body{
 
 </style>
 <%
-@asian = '<ul>'
-"關公大戰外星人 ｜ 香港大災難 ｜ 戰神 ｜ CALAMITY
-春光乍泄 ｜ Happy Together (1997)
-東邪西毒：終極版 ｜ Ashes.Of.Time.Redux.2008.720p.BluRay.x264.DTS-WiKi
-臥虎藏龍 ｜ Crouching Tiger, Hidden Dragon 2000 (Dual Audio) 720p BRRip H264 (Evade)
-倩女幽魂 <del>1</del>,2,3 ｜ A Chinese Ghost Story.1987-1991
-英雄本色｜A.Better.Tomorrow.Trilogy.BluRay.720p.DTS.2Audio.x264-CHD"
-.each_line.each{|x| @asian += '<li>' + x + '</li>'}
-@asian += '</ul>'
-@asian = @asian.html_safe
 
-@misc = '<ul>'
-"黃子華棟篤笑
-譚詠麟再度感動演唱會2010
-Mythbusters
-Simpsons"
-.each_line.each{|x| @misc += '<li>' + x + '</li>'}
-@misc += '</ul>'
-@misc = @misc.html_safe
 
 %>
 <div id='block'>
@@ -58,8 +40,8 @@ Simpsons"
 		<li>Insanely good looking</li>
 		<li>All of the above</li>		
 	</ul>
-	<h1>Therefore I have carefully handpicked some awesome movies for you to choose from:</h1>
-	<h2>720p:</h2>
+	<h1>Therefore I have carefully handpicked some awesome movies for you to choose from</h1>
+<!--	<h2>720p:</h2>
 	<%=@list720p%>
 	
 	<h2>SD:</h2>
@@ -70,7 +52,7 @@ Simpsons"
 	
 	<h2>Misc</h2>
 	<%=@misc%>
-	
+	-->
 	<h1>Also available, The kid's cocaine:</h1>
 	<%=@games%>
 	and others! (you're not gonna play my SimCity 2000 right?)<br>

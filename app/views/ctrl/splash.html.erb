@@ -77,7 +77,11 @@ html{
 #illutrationCredits {
 	float: right;
 	color: white;
-	margin-top: 15px;
+	margin-top: -5px;
+}
+
+.thickerLines {
+	line-height: 200%
 }
 </style>
 <script>
@@ -91,13 +95,15 @@ $(function(){
 });
 </script>
 <div id='block'>
-	<h1>Welcome, Cyber Stalkers</h1>
-	<h2>Thanks for dropping by!</h2>
-	<br>
-	<br>
-	<p>My notepad is <a href="http://notes.samwong.hk">here</a>. My books are <a href="http://books.samwong.hk">here</a>.<br>Library Caffeine is <a href="/LibraryCaffeine.jar" class="showtip" original-title="Stops machines from sleeping / logging out">here</a>. My news clippings are <a href="http://starred.samwong.hk" class="showtip" original-title="When I can be bothered to star them...">here</a>.<br>My CV aka Resume is <a href="http://cv.samwong.hk">here</a>.<br>
-	<p>Those icons at the bottom should satisfy your stalking / scheduling needs:</p>	
-	<br>
+	<h1 style="margin-bottom:0px;">Welcome, Cyber Stalkers</h1>
+		<h2>Thanks for dropping by!</h2>
+		<br>
+		<p class="thickerLines">My notepad is <a href="http://notes.samwong.hk/">here</a>. My books are <a href="http://books.samwong.hk/">here</a>. My Github is <a href="http://github.samwong.hk" class="showtip" original-title="Not much is there, sorry :(">here</a>. My feeds are <a href="http://samwong.hk/feedly.opml" class="showtip" original-title="OPML file, updated in July 13">here</a>.
+		<br>
+			My final year project is <a class="showtip" original-title="Tag line: Energy efficient, crowdsourced, Room-level positioning service. (WIP)">RoomService</a>. Here is the <a href="http://fyp.samwong.hk/"  class="showtip" original-title="Warning: It's 4MB">Report</a> and <a href="http://finalpresentation.samwong.hk/">Presentation</a>. 
+			<br>
+			My news clippings are <a href="http://starred.samwong.hk/" class="showtip" original-title="Went down with GReader :(  Feedly?">here</a>. My CV aka Resume is <a class='showtip' original-title='next time, simply cv.samwong.hk' href="http://cv.samwong.hk/">here</a>.<br>
+		</p><p>Those icons at the bottom should satisfy your stalking / scheduling needs:</p>
 
 	<%=image_tag("signature-alpha-white.png",  :width => '200px', :style => 'margin: 0')%><br>
 	<div style='color:white; margin-left:15px'>
@@ -112,7 +118,7 @@ $(function(){
 		<div><a href="skype:samwong1990?add"><%=image_tag("skype.png", :width => '50px', :alt => 'Add me to Skype')%></a></div>
 		<div><a href="#" ><%=image_tag("gcalendar.png",  :id  =>  'showgcal', :width => '50px')%></a></div><br>
 	</div>
-	<span id='illutrationCredits'>Illustration by Suhaib Sarmad</span>
+			<span id="illutrationCredits">With illustration by <a href="http://legendof.me/">Suhaib Sarmad</a></span>
 </div>
 <div id='gcal'  style='display:none;' >
 <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=sam.wong.1990%40gmail.com&amp;color=%23060D5E&amp;src=inlhapfv74hvnfo1d5ot4obs1pajnv5d%40import.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FLondon" style=" border-width:0 " width="<%= @contentWidth %>" height="<%=@contentHeight%>" frameborder="0" scrolling="no"></iframe>
